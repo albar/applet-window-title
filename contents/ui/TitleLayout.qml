@@ -176,6 +176,7 @@ GridLayout{
                 color: enforceLattePalette ? latteBridge.palette.textColor : theme.textColor
                 font.capitalization: plasmoid.configuration.capitalFont ? Font.Capitalize : Font.MixedCase
                 font.bold: plasmoid.configuration.boldFont
+                font.pixelSize: plasmoid.configuration.fontSize
                 font.italic: plasmoid.configuration.italicFont
 
                 readonly property bool showsTitleText: plasmoid.configuration.style === 1 /*Title*/
@@ -230,6 +231,7 @@ GridLayout{
                 color: firstTxt.color
                 font.capitalization: firstTxt.font.capitalization
                 font.bold: firstTxt.font.bold
+                font.pixelSize: plasmoid.configuration.fontSize
                 font.italic: firstTxt.font.italic
             }
 
@@ -244,6 +246,7 @@ GridLayout{
                 color: firstTxt.color
                 font.capitalization: firstTxt.font.capitalization
                 font.bold: firstTxt.font.bold
+                font.pixelSize: plasmoid.configuration.fontSize
                 font.italic: firstTxt.font.italic
 
                 visible: text !== "" && !(showsTitleText && exceedsApplicationText)

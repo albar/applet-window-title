@@ -30,6 +30,7 @@ import "../../tools/Tools.js" as Tools
 Item {
     id: root
 
+    property alias cfg_fontSize: fontSize.value
     property alias cfg_boldFont: boldChk.checked
     property alias cfg_italicFont: italicChk.checked
     property alias cfg_capitalFont: capitalChk.checked
@@ -140,6 +141,16 @@ Item {
                 Layout.minimumWidth: Math.max(centerFactor * root.width, minimumWidth)
                 text: i18n("Font:")
                 horizontalAlignment: Text.AlignRight
+            }
+
+            SpinBox{
+                id: fontSize
+                minimumValue: 8
+                maximumValue: 32
+                suffix: " " + i18nc("pixels","px.")
+            }
+
+            Label{
             }
 
             CheckBox{
